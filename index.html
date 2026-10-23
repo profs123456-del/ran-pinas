@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BOSS TRACKER</title>
+
+<!-- DESIGNER FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- STYLES -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="rightLogo"><img src="logo.png" alt="Logo"></div>
+
+<div id="nextBossPanel">
+ <h3>NEXT SPAWN</h3>
+ <div id="nextBossName">---</div>
+ <div id="nextBossTimer">--:--:--</div>
+ <div id="nextBossTime">---</div>
+</div>
+<h1>RAN PINAS</h1>
+
+<!-- ✅ KILL HISTORY PANEL -->
+<div id="historyPanel">
+  <h3>📜 KILL HISTORY</h3>
+  <div id="historyList"></div>
+
+  <div class="history-actions">
+    <button class="small-btn btn-refresh" onclick="refreshHistory()">REFRESH</button>
+    <button class="small-btn btn-clear" onclick="clearHistory()">CLEAR</button>
+  </div>
+
+  <input id="pinInput" type="password" placeholder="Admin PIN">
+  <div id="pinError"></div>
+</div>
+
+<div class="top-controls">
+  <button class="control-bar control-sort" id="sortBtn">AUTO SORT: ON</button>
+  <button class="control-bar control-reset" onclick="resetAll()">RESET ALL</button>
+  <button class="control-bar control-sound" id="soundBtn">ALARM: ON</button>
+</div>
+
+<div class="container" id="bossContainer"></div>
+
+<audio id="sound"><source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+<!-- Firebase (must load before script.js) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<!-- APP LOGIC -->
+<script src="script.js"></script>
+
+</body>
+</html>
