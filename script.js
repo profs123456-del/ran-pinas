@@ -30,9 +30,9 @@ document.addEventListener("focusin",e=>{if(e.target.type==="datetime-local") inp
 document.addEventListener("focusout",e=>{if(e.target.type==="datetime-local") inputLock=false;});
 
 const bosses=[
- {id:"1",name:"CH-0 DARK ART MASTER",respawn:3},
- {id:"2",name:"CH-1 DARK ART MASTER",respawn:3},
- {id:"3",name:"CH-2 DARK ART MASTER",respawn:3},
+ {id:"1",name:"CH-0 DARK ART MASTER",respawn:1},
+ {id:"2",name:"CH-1 DARK ART MASTER",respawn:1},
+ {id:"3",name:"CH-2 DARK ART MASTER",respawn:1},
  {id:"4",name:"CH-0 CRUEL JUPITER",respawn:8},
  {id:"5",name:"CH-1 CRUEL JUPITER",respawn:8},
  {id:"6",name:"CH-2 CRUEL JUPITER",respawn:8},
